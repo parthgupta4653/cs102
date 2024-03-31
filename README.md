@@ -1,3 +1,5 @@
+- can pull main branch for just frontend
+
 - All html files are in views folder with extension .ejs for nodejs
 - put all corresponding css and frontend js in public folder
 - for backend, implement in server.js file in root folder
