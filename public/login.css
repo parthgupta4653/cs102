@@ -1,0 +1,74 @@
+body{
+    background-image: url(background.svg);
+    background-size: cover;
+}
+.qwe{
+    display: flex;
+    justify-content: center;
+    animation-name: slide;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+.main{
+    background-color: #1a447ac5;
+    border-radius: 20px;
+    width: 630px;
+    height: 630px;
+    margin-top: 9%;
+    box-shadow: 2px 2px 2px 2px #000000;
+}
+.heading{
+    text-align: center;
+    font-size: 15px;
+    
+}
+.creds{
+    text-align: center;
+    font-size: 35px;
+}
+.login{
+    text-align: center;
+}
+.email, .password{
+    font-size: 25px;
+    border-radius: 7px;
+    border: none;
+}
+.email{
+    margin-top: 20px;
+}
+.log_button{
+    height: 40px;
+    width: 120px;
+    font-size: 25px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 15px;
+    border: #0f5186 solid;
+
+}
+.log_button:hover{
+    background-color: #c3dfec;
+    font-weight: 600;
+}
+img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+
+#error_message{
+    text-align: center;
+    color: #FF0000;
+    font-size: larger;
+}
+
+@keyframes slide {
+    from{
+        transform: translateY(500px);
+    } 
+    to{
+        transform: translateY(0px);
+    }
+}

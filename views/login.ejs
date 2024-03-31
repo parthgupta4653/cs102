@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Log in</title>
+        <link rel="stylesheet" type="text/css" href="login.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    </head>
+    <body>
+        <div class="qwe"><div class="main">
+            <div class="log_image">
+                <img src="login_block.jpg" height="400px" width="630px">
+            </div>
+            <form action="/login" method="POST">
+                <div class="creds">
+                    <i class="bi bi-envelope"></i>
+                    <input class="email" type="email" placeholder="Email Address" id="email" name="email">
+			        <br>
+                    <i class="bi bi-key"></i>
+			        <input class="password" type="Password" placeholder="Password" id="password" name="password">
+                </div>
+                <br><br>
+                <div class="login">
+                    <button class="log_button" href="home_page.html" type="submit">LOG-IN</button>
+                </div>
+            </form>
+            <br>
+            <div id="error_message">
+                <span>
+                    <% if (messages.error) { %>
+                    <%= messages.error %>
+                    <% } %>
+                </span>
+            </div>
+        </div></div>
+    </body>
+</html>

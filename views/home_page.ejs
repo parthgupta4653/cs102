@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>School System</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" type="text/css" href="home_page.css">
+    <script src="home_page.js"></script>
+</head>
+<body>
+    <div class="topBar">
+        <div class="leftTopbar">
+            <a href="/" class="text-dark home_link">School System</a>
+        </div>
+        <div class="rightTopbar">
+            <button class="TopDropbtn"><i class="text-dark profile bi-person-circle"></i></button>
+            <div class="Topdropdown-content">
+                <a href="/profile" class="text-dark ">View my Details</a>
+                <form action="/logout?_method=DELETE" method="POST" class="text-dark">
+                    <button type="submit" class="text-dark">Log Out</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+    <!---------------------------------------------------------------------------------------------------------------->
+    <div id="side_bar"  class="sidebar" onmouseover="Sidebar()" onmouseout="Sidebar()">
+        <div class="side_bar_menu" style="display: <%= ma102%>"><a href="#" class="side_bar_link"><div class="side_bar_menu_text"><img style="height: 50px; width: 50px; border-radius: 100px;" src="icons/s1.png"><span  id="icon-text" class="icon-text">Subject-1</span></a><br></div></div>
+        <div class="side_bar_menu" style="display: <%= cs102%>"><a href="#" class="side_bar_link"><div class="side_bar_menu_text"><img style="height: 50px; width: 50px; border-radius: 100px;" src="icons/s2.png"><span  id="icon-text1" class="icon-text">Subject-2</span></a><br></div></div>
+        <div class="side_bar_menu" style="display: <%= ee101%>"><a href="#" class="side_bar_link"><div class="side_bar_menu_text"><img style="height: 50px; width: 50px; border-radius: 100px;" src="icons/s3.png"><span  id="icon-text2" class="icon-text">Subject-3</span></a><br></div></div>
+        <div class="side_bar_menu" style="display: <%= no101%>"><a href="#" class="side_bar_link"><div class="side_bar_menu_text"><img style="height: 50px; width: 50px; border-radius: 100px;" src="icons/s4.png"><span  id="icon-text3" class="icon-text">Subject-4</span></a><br></div></div>
+    </div>
+    <!------------------------------------------------------------------------------------------------------------------>
+    <div class="classes">
+        <div class="first_class class" style="display: <%= ma102%>">
+            <a class="first_class_link class_link" href="#">
+                <div class="first_card-body">
+                    <div class="subject_code">MA102
+                        <button onclick="showLoginPrompt('loginForm1','abc1')"><img id="abc1" style="height: 32px; width: 32px;" src="icons/downarrow.png" alt="down_arrow"></button>
+                        <button class="attendance_button" onclick="showAttendance()"><img src="icons/attendance-statistics-1-32.png"></button>
+                            <div id="loginForm1" style="display: none;">
+                                <label class="pw" for="password"><br>Password:</label>
+                                <input type="password" id="password" name="password"><br><br>
+                                <button class="submit_button" onclick="login()">Submit</button>
+                            </div>
+                    <div class="subject_detail">Subject-1</div>
+                    <div class="proff">teacherA</div>   
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="second_class class" style="display: <%= cs102%>">
+            <a class="second_class_link class_link" href="#">
+                <div class="second_card-body">
+                    <div class="subject_code">CS102
+                        <button onclick="showLoginPrompt('loginForm2','abc2')"><img id="abc2" style="height: 32px; width: 32px;" src="icons/downarrow.png" alt="down_arrow"></button>
+                        <button class="attendance_button" onclick="showAttendance()"><img src="icons/attendance-statistics-1-32.png"></button>
+                            <!-- Here are the append changes for attendance -->
+                            <div id="loginForm2" style="display: none;">
+                                <label class="pw" for="password"><br>Password:</label>
+                                <input type="password" id="password" name="password"><br><br>
+                                <button class="submit_button" onclick="login()">Submit</button>
+                            </div>
+                    </div>
+                    <div class="subject_detail">Subject-2</div>
+                    <div class="proff">teacherB</div>                   
+                </div>
+            </a>
+        </div>
+        <div class="third_class class" style="display: <%= ee101%>">
+            <a class="third_class_link class_link" href="#">
+                <div class="third_card-body">
+                    <div class="subject_code">EE101
+                        <button onclick="showLoginPrompt('loginForm3','abc3')"><img id="abc3" style="height: 32px; width: 32px;" src="icons/downarrow.png" alt="down_arrow"></button>
+                        <button class="attendance_button" onclick="showAttendance()"><img src="icons/attendance-statistics-1-32.png"></button>
+                            <!-- Here are the appendet changes for attendance -->
+                            <div id="loginForm3" style="display: none;">
+                                <label class="pw" for="password"><br>Password:</label>
+                                <input type="password" id="password" name="password"><br><br>
+                                <button class="submit_button" onclick="login()">Submit</button>
+                            </div>
+                    </div>
+                    <div class="subject_detail">Subject-3</div>
+                    <div class="proff">teacherC</div>                   
+                </div>
+            </a>
+        </div>
+
+        <div class="fourth_class class" style="display: <%= no101%>">
+            <a class="fourth_class_link class_link" href="#">
+                <div class="fourth_card-body">
+                    <div class="subject_code">NO101
+                        <button onclick="showLoginPrompt('loginForm4','abc4')"><img id="abc4" style="height: 32px; width: 32px;" src="icons/downarrow.png" alt="down_arrow"></button>
+                        <button class="attendance_button" onclick="showAttendance()"><img src="icons/attendance-statistics-1-32.png"></button>
+                            <!-- Here are the appended changes for attendance -->
+                            <div id="loginForm4" style="display: none;">
+                                <label class="pw" for="password"><br>Password:</label>
+                                <input type="password" id="password" name="password"><br><br>
+                                <button class="submit_button" onclick="login()">Submit</button>
+                            </div>
+                    </div>
+                    <div class="subject_detail">Subject-4</div>
+                    <div class="proff">teacherD</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <script src="homepage.js"></script>
+</body>
+</html>
