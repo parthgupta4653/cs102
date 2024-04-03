@@ -10,9 +10,9 @@ const bcrypt = require("bcrypt")
 
 const all_subjects_val = {"MA102":"none", "CS102":"none", "NO101":"none", "EE101":"none"}
 
-const db = mysql.createConnection({host:"localhost", user:"root", password:"", database:"cs102" })
+const db = mysql.createConnection({host:"127.0.0.1", user:"root", password:"root", database:"cs102" })
 db.connect((error) =>{
-    if (error){throw err}
+    if (error){throw error}
 })
 
 
