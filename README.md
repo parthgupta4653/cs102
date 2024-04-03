@@ -1,5 +1,3 @@
-- can pull main branch for just frontend
-
 - All html files are in views folder with extension .ejs for nodejs
 - put all corresponding css and frontend js in public folder
 - for backend, implement in server.js file in root folder
@@ -9,7 +7,7 @@
 
 - download a mysql server app (I use Xampp)
 - download nodejs
-- in cmd on folder path type "npm init -y", then type "npm i bcrypt ejs express express-flash express-session method-override mysql passport passport-local" to install all dependencies
+- in cmd on folder path type "npm init -y", then type "npm i bcrypt ejs express express-flash express-session method-override mysql passport passport-local nodemon xlsx" to install all dependencies
 - To run server type npm run start
 - password for both accounts is "123"
   
@@ -52,13 +50,15 @@
 </tr>
 </tbody></table>
 
+Table Name:  "attendance"
 
-
-
-
-
-
-
-
-
-
+| id | subject | date       | status |
+|----|---------|------------|--------|
+| 1  | CS102   | 2024-04-10 | A      |
+| 1  | CS102   | 2024-04-16 | P      |
+| 1  | EEIOI   | 2024-04-09 | P      |
+| 1  | MA102   | 2024-04-09 | A      |
+| 2  | CS102   | 2024-04-10 | P      |
+| 2  | CS102   | 2024-04-16 | A      |
+| 2  | MA102   | 2024-04-18 | P      |
+| 2  | NOIOI   | 2024-04-16 | A      |
