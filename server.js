@@ -6,13 +6,14 @@ const flash = require('express-flash')
 const session = require('express-session')
 const methodOverride = require('method-override')
 const LocalStrategy = require('passport-local').Strategy
+const xlsx = require('xlsx')
 const bcrypt = require("bcrypt")
 
 const all_subjects_val = {"MA102":"none", "CS102":"none", "NO101":"none", "EE101":"none"}
 
 const db = mysql.createConnection({host:"localhost", user:"root", password:"", database:"cs102" })
 db.connect((error) =>{
-    if (error){throw err}
+    if (error){throw error}
 })
 
 
@@ -103,6 +104,36 @@ app.post('/login',checkNotAuthenticated, passport.authenticate('local', {
       res.redirect('/login');
     });
   });
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+app.post("/downloadattendance_ma102", function(req,res){
+  //console.log("hi")
+  id = req.user.id
+  get_attendance(id,"MA102")
+  res.download("attendance.xlsx")
+});
+
+app.post("/downloadattendance_cs102", function(req,res){
+  //console.log("hi")
+  id = req.user.id
+  get_attendance(id,"CS102")
+  res.download("attendance.xlsx")
+});
+
+app.post("/downloadattendance_ee101", function(req,res){
+  //console.log("hi")
+  id = req.user.id
+  get_attendance(id,"EE101")
+  res.download("attendance.xlsx")
+});
+
+app.post("/downloadattendance_no101", function(req,res){
+  //console.log("hi")
+  id = req.user.id
+  get_attendance(id,"NO101")
+  res.download("attendance.xlsx")
+});
+
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 function checkAuthenticated(req, res, next) {
@@ -119,6 +150,17 @@ function checkAuthenticated(req, res, next) {
     }
     next()
   }
-
+  function get_attendance(id, sub){
+    db.query("select * from attendance where id="+id+" and subject= '"+sub+"'", function(err, results){
+      if(err){throw err;}
+      results = Object.values(JSON.parse(JSON.stringify(results)))
+      for (i in results){results[i].date=results[i].date.substring(0,10)}
+      console.log(results)
+      const sheet = xlsx.utils.json_to_sheet(results);
+      const book = xlsx.utils.book_new()
+      xlsx.utils.book_append_sheet(book, sheet , "attendance")
+      xlsx.writeFile(book, "attendance.xlsx")   
+    });
+  }
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 app.listen(3000)
