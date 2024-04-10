@@ -28,36 +28,23 @@
       </div>
     <!------------------------------------------------------------------------------------------------------------------>
     <div class="main_body">
-
         <div class="posts">
+            <%messages.forEach(post=>{%>
             <div class="post">
                 <div class="sender_detail">
-                    sender time<br>time
+                    <%=post.sender%> <br><%=post.time%>
                 </div>
                 <div class="message">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto id dolor nesciunt corporis commodi ipsa, quae hic dicta rerum saepe animi libero quis, sapiente eum aspernatur eveniet laudantium tenetur totam?
+                    <%=post.message%>    
                 </div>
             </div>
-            <div class="post">
-                <div class="sender_detail">
-                    sender time<br>time
-                </div>
-                <div class="message">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto id dolor nesciunt corporis commodi ipsa, quae hic dicta rerum saepe animi libero quis, sapiente eum aspernatur eveniet laudantium tenetur totam?
-                </div>
-            </div>
-            <div class="post">
-                <div class="sender_detail">
-                    sender time<br>time
-                </div>
-                <div class="message">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto id dolor nesciunt corporis commodi ipsa, quae hic dicta rerum saepe animi libero quis, sapiente eum aspernatur eveniet laudantium tenetur totam?
-                </div>
-            </div>
+            <%})%>
         </div>
         <div class="send">
-            <input type="text" class="send_text" placeholder="What's on your mind?...">
-            <button class="send_button"><i class="fa-solid fa-arrow-right fa-4x"></i></button>
+            <form action="/post_ma102" method="POST">
+                <input type="text" name="message"class="send_text" placeholder="What's on your mind?...">
+                <button class="send_button"><i class="fa-solid fa-arrow-right fa-4x"></i></button>
+            </form>
         </div>
     </div>
     <script src="home_page.js"></script>
