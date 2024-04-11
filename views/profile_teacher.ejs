@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile
+    </title>
+    <link rel="stylesheet" href="profile_teacher.css">
+</head>
+
+<body>
+    <div id="mainbox" class="main">
+
+
+        <div class="box" id="heading">
+            <h2>MY PROFILE</h2>
+        </div>
+
+
+        <div id="profilepic">
+            <img src="profilepics/profilepic.png" alt="profilepic" id="photo">
+
+        </div>
+        <div id="details" class="box">
+            <pre>NAME      :<span id="name"><%= name %></span></pre>
+            <pre>EMAIL     :<span id="email"><%= email %></span></pre>
+            <pre>DEPARTMENT:<span id="department"><%= department %></span></pre>
+            <pre>BATCH     :<span id="batch"><%= batch %></span></pre>
+            <br>
+            <div id="btn">
+                <a href="/" class="btn1">VIEW MY COURSES</a>
+            </div>
+        </div>
+    </div>
+    <script src="profile_teacher.js"></script>
+</body>
+
+</html>
