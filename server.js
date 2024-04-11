@@ -162,5 +162,19 @@ function checkAuthenticated(req, res, next) {
       xlsx.writeFile(book, "attendance.xlsx")   
     });
   }
+  app.get("/post", (req,res)=>{
+    let subjects = req.user.subjects.split(" ")
+  all_subjects = Object.keys(all_subjects_val)
+
+  for(let i=0; i<all_subjects.length; i++){
+    if(subjects.includes(all_subjects[i])){
+      all_subjects_val[all_subjects[i]] = "block";
+    }
+  }
+
+  res.render("post", {ma102:all_subjects_val['MA102'], cs102:all_subjects_val['CS102'], ee101:all_subjects_val['EE101'], no101:all_subjects_val['NO101']})
+  for (let key in all_subjects_val) {
+     all_subjects_val[key] = "none"
+  }})
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 app.listen(3000)
