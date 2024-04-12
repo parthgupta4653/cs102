@@ -19,3 +19,27 @@ function Sidebar() {
 
     }
 }
+
+function showLoginPrompt(xyz,abc) {
+
+
+    let x=document.getElementById(abc).alt;
+    
+    if(x=="down_arrow"){
+        document.getElementById(abc).src="icons/close.png";
+        var loginForm = document.getElementById(xyz);
+        loginForm.style.display = "block";
+
+        document.getElementById(abc).alt="close";
+    }
+
+    else{
+        document.getElementById(abc).src="icons/pencil.svg";
+        var loginForm = document.getElementById(xyz);
+        loginForm.style.display = "none";
+
+        document.getElementById(abc).alt="down_arrow";
+
+    }
+    
+}

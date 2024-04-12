@@ -25,7 +25,7 @@ function showLoginPrompt(xyz,abc) {
 
     let x=document.getElementById(abc).alt;
     
-    if(x=="down_arrow"){
+    if(x=="Mark_Attendance"){
         document.getElementById(abc).src="icons/close.png";
         var loginForm = document.getElementById(xyz);
         loginForm.style.display = "block";
@@ -34,11 +34,11 @@ function showLoginPrompt(xyz,abc) {
     }
 
     else{
-        document.getElementById(abc).src="icons/downarrow.png";
+        document.getElementById(abc).src="icons/attendance-statistics-1-32.png";
         var loginForm = document.getElementById(xyz);
         loginForm.style.display = "none";
 
-        document.getElementById(abc).alt="down_arrow";
+        document.getElementById(abc).alt="Mark_Attendance";
 
     }
     

@@ -2,3 +2,5 @@ node_modules
 package.json
 package-lock.json
 attendance.xlsx
+tests.py
+msedgedriver.exe

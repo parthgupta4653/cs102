@@ -10,12 +10,12 @@
     <body>
         <div class="topBar">
             <div class="leftTopbar">
-                <a href="home_page.html" class="home_link" style="color:rgb(80, 191, 158);">School System</a>
+                <a href="/" class="home_link" style="color:rgb(80, 191, 158);">School System</a>
             </div>
             <div class="rightTopbar">
                 <button class="TopDropbtn"><i class="profile bi-person-circle"></i></button>
                 <div class="Topdropdown-content">
-                    <a href="#" >View my Details</a>
+                    <a href="/profile" >View my Details</a>
                     <a  href="login.html">Log Out</a>
                 </div>
             </div>
@@ -28,25 +28,26 @@
       </div>
     <!------------------------------------------------------------------------------------------------------------------>
     <div class="main_body">
-        <div class="posts">
-            <%messages.forEach(post=>{%>
-            <div class="post">
-                <div class="sender_detail">
-                    <%=post.sender%> <br><%=post.time%>
+
+        <div class="main_body">
+            <h1><%= subject%></h1>
+            <div class="posts">
+                <%messages.forEach(post=>{%>
+                <div class="post">
+                    <div class="sender_detail">
+                        <%=post.sender%> <br><%=post.time%>
+                    </div>
+                    <div class="message">
+                        <%=post.message%>    
+                    </div>
                 </div>
-                <div class="message">
-                    <%=post.message%>    
-                </div>
+                <%})%>
             </div>
-            <%})%>
-        </div>
-        <div class="send">
-            <form action="/post_ma102" method="POST">
-                <input type="text" name="message"class="send_text" placeholder="What's on your mind?...">
+            <div class="send">
+                <input type="text" class="send_text" placeholder="What's on your mind?...">
                 <button class="send_button"><i class="fa-solid fa-arrow-right fa-4x"></i></button>
-            </form>
+            </div>
         </div>
-    </div>
     <script src="home_page.js"></script>
     </body>
 </html>

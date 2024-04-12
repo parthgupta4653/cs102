@@ -210,6 +210,9 @@ a:visited{
 form{
   display: inline;
 }
+a{
+  color: #000000;
+}
 
 @keyframes slide_up {
   from{

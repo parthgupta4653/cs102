@@ -138,8 +138,6 @@ body{
   border: #000000 solid;
   border-radius: 15px;
   background-color: #5153d2;
-  height:78.8px;
-  width:1380px;
 }
 
 .class_link{
@@ -152,6 +150,7 @@ body{
   font-family:sans-serif;
   color:#000000;
   display: inline-block;
+  width:100%;
 }
 .subject_detail{
   margin-top:4px;
@@ -177,6 +176,13 @@ a:visited{
 .buttons{
   margin-left: 50px;
 
+}
+.code{
+  color: greenyellow;
+  align-self:flex-end;
+  display: inline;
+  padding-left: 50%;
+  font-size: 20px;
 }
 
 
