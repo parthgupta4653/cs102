@@ -105,51 +105,91 @@ app.get("/profile", checkAuthenticated, (req,res)=>{
 })
 
 app.get("/ma102", checkAuthenticated, (req,res)=>{
+  let subjects = req.user.subjects.split(" ")
+  all_subjects = Object.keys(all_subjects_val)
+
+  for(let i=0; i<all_subjects.length; i++){
+    if(subjects.includes(all_subjects[i])){
+      all_subjects_val[all_subjects[i]] = "block";
+    }
+  }
   db.query("select * from posts where subject='MA102'", function(err,results){
     results =  Object.values(JSON.parse(JSON.stringify(results)))
     //console.log(results)
     if(req.user.type === "student"){
-      res.render("s_post", {messages: results, subject:"Linear Algebra"})
+      res.render("s_post", {messages: results, subject:"Linear Algebra",ma102:all_subjects_val['MA102'], cs102:all_subjects_val['CS102'], ee101:all_subjects_val['EE101'], no101:all_subjects_val['NO101']})
     }
     else{
-      res.render("t_post", {messages: results, subject:"Linear Algebra"})
+      res.render("t_post", {subCode:"ma102", messages: results, subject:"Linear Algebra",ma102:all_subjects_val['MA102'], cs102:all_subjects_val['CS102'], ee101:all_subjects_val['EE101'], no101:all_subjects_val['NO101']})
     }
+    for (let key in all_subjects_val) {
+      all_subjects_val[key] = "none"}
   })
 })
 app.get("/cs102", checkAuthenticated, (req,res)=>{
+  let subjects = req.user.subjects.split(" ")
+  all_subjects = Object.keys(all_subjects_val)
+
+  for(let i=0; i<all_subjects.length; i++){
+    if(subjects.includes(all_subjects[i])){
+      all_subjects_val[all_subjects[i]] = "block";
+    }
+  }
   db.query("select * from posts where subject='CS102'", function(err,results){
     results =  Object.values(JSON.parse(JSON.stringify(results)))
     //console.log(results)
     if(req.user.type === "student"){
-      res.render("s_post", {messages: results, subject:"Software tools"})
+      res.render("s_post", {messages: results, subject:"Software tools", ma102:all_subjects_val['MA102'], cs102:all_subjects_val['CS102'], ee101:all_subjects_val['EE101'], no101:all_subjects_val['NO101']})
     }
     else{
-      res.render("t_post", {messages: results, subject:"Software tools"})
+      res.render("t_post", {subCode:"cs102", messages: results, subject:"Software tools", ma102:all_subjects_val['MA102'], cs102:all_subjects_val['CS102'], ee101:all_subjects_val['EE101'], no101:all_subjects_val['NO101']})
     }
+    for (let key in all_subjects_val) {
+      all_subjects_val[key] = "none"}
   })
 })
 app.get("/ee101", checkAuthenticated, (req,res)=>{
+  let subjects = req.user.subjects.split(" ")
+  all_subjects = Object.keys(all_subjects_val)
+
+  for(let i=0; i<all_subjects.length; i++){
+    if(subjects.includes(all_subjects[i])){
+      all_subjects_val[all_subjects[i]] = "block";
+    }
+  }
   db.query("select * from posts where subject='EE101'", function(err,results){
     results =  Object.values(JSON.parse(JSON.stringify(results)))
     //console.log(results)
     if(req.user.type === "student"){
-      res.render("s_post", {messages: results, subject:"Introduction to Electrical & Electronics Engineering"})
+      res.render("s_post", {messages: results, subject:"Introduction to Electrical & Electronics Engineering", ma102:all_subjects_val['MA102'], cs102:all_subjects_val['CS102'], ee101:all_subjects_val['EE101'], no101:all_subjects_val['NO101']})
     }
     else{
-      res.render("t_post", {messages: results, subject:"Introduction to Electrical & Electronics Engineering"})
+      res.render("t_post", {subCode:"ee101", messages: results, subject:"Introduction to Electrical & Electronics Engineering", ma102:all_subjects_val['MA102'], cs102:all_subjects_val['CS102'], ee101:all_subjects_val['EE101'], no101:all_subjects_val['NO101']})
     }
+    for (let key in all_subjects_val) {
+      all_subjects_val[key] = "none"}
   })
 })
 app.get("/no101", checkAuthenticated, (req,res)=>{
+  let subjects = req.user.subjects.split(" ")
+  all_subjects = Object.keys(all_subjects_val)
+
+  for(let i=0; i<all_subjects.length; i++){
+    if(subjects.includes(all_subjects[i])){
+      all_subjects_val[all_subjects[i]] = "block";
+    }
+  }
   db.query("select * from posts where subject='NO101'", function(err,results){
     results =  Object.values(JSON.parse(JSON.stringify(results)))
     //console.log(results)
     if(req.user.type === "student"){
-      res.render("s_post", {messages: results, subject:"Sports"})
+      res.render("s_post", {messages: results, subject:"Sports", ma102:all_subjects_val['MA102'], cs102:all_subjects_val['CS102'], ee101:all_subjects_val['EE101'], no101:all_subjects_val['NO101']})
     }
     else{
-      res.render("t_post", {messages: results, subject:"Sports"})
+      res.render("t_post", {subCode:"no101", messages: results, subject:"Sports", ma102:all_subjects_val['MA102'], cs102:all_subjects_val['CS102'], ee101:all_subjects_val['EE101'], no101:all_subjects_val['NO101']})
     }
+    for (let key in all_subjects_val) {
+      all_subjects_val[key] = "none"}
   })
 })
 
@@ -269,7 +309,7 @@ app.post("/edit_attendance_no101", function(req,res){
 
 app.post("/post_ma102", function(req,res){
   text = req.body.message
-  //console.log(text)
+  console.log(text)
   var timestamp = new Date().toString().slice(0,21)
   db.query("INSERT INTO posts (message, sender, subject, time) VALUES ('"+text+"', '"+req.user.name+"', 'MA102', '"+timestamp+"')")
   //console.log(timestamp)

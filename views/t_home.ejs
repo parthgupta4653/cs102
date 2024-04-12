@@ -20,23 +20,39 @@
             <div class="Topdropdown-content">
                 <a href="/profile" class="text-dark ">View my Details</a>
                 <form action="/logout?_method=DELETE" method="POST" class="text-dark">
-                    <button type="submit" class="text-dark">Log Out</button>
+                    <button type="submit" class="dark">Log Out</button>
                 </form>
             </div>
         </div>
     </div>
     <div id="side_bar" class="sidebar" onmouseover="Sidebar()" onmouseout="Sidebar()">
-        <div class="side_bar_menu" style="display: <%= ma102%>"><a href="#" class="side_bar_link"><div class="side_bar_menu_text"><img style="height: 50px; width: 50px; border-radius: 100px;"src="icons/s1.png"><span id="icon-text" class="icon-text">Subject-1</span></a><br></div></div>
-        <div class="side_bar_menu" style="display: <%= cs102%>"><a href="#" class="side_bar_link"><div class="side_bar_menu_text"><img style="height: 50px; width: 50px; border-radius: 100px;"src="icons/s2.png"><span id="icon-text1" class="icon-text">Subject-2</span></a><br></div></div>
-        <div class="side_bar_menu" style="display: <%= ee101%>"><a href="#" class="side_bar_link"><div class="side_bar_menu_text"><img style="height: 50px; width: 50px; border-radius: 100px;"src="icons/s3.png"><span id="icon-text2" class="icon-text">Subject-3</span></a><br></div></div>
-        <div class="side_bar_menu" style="display: <%= no101%>"><a href="#" class="side_bar_link"><div class="side_bar_menu_text"><img style="height: 50px; width: 50px; border-radius: 100px;"src="icons/s4.png"><span id="icon-text3" class="icon-text">Subject-4</span></a><br></div></div>
+        <div class="side_bar_menu" style="display: <%= ma102%>"><a href="\ma102" class="side_bar_link">
+                <div class="side_bar_menu_text"><img style="height: 50px; width: 50px; border-radius: 100px;"
+                        src="icons/s1.png"><span id="icon-text" class="icon-text">Subject-1</span>
+            </a><br></div>
+    </div>
+    <div class="side_bar_menu" style="display: <%= cs102%>"><a href="cs102" class="side_bar_link">
+            <div class="side_bar_menu_text"><img style="height: 50px; width: 50px; border-radius: 100px;"
+                    src="icons/s2.png"><span id="icon-text1" class="icon-text">Subject-2</span>
+        </a><br></div>
+    </div>
+    <div class="side_bar_menu" style="display: <%= ee101%>"><a href="ee101" class="side_bar_link">
+            <div class="side_bar_menu_text"><img style="height: 50px; width: 50px; border-radius: 100px;"
+                    src="icons/s3.png"><span id="icon-text2" class="icon-text">Subject-3</span>
+        </a><br></div>
+    </div>
+    <div class="side_bar_menu" style="display: <%= no101%>"><a href="no101" class="side_bar_link">
+            <div class="side_bar_menu_text"><img style="height: 50px; width: 50px; border-radius: 100px;"
+                    src="icons/s4.png"><span id="icon-text3" class="icon-text">Subject-4</span>
+        </a><br></div>
+    </div>
     </div>
 
     <div class="classes">
         <div class="first_class class" style="display: <%= ma102%>">
-            <a class="first_class_link class_link" href="#">
+            
                 <div class="first_card-body">
-                    <div class="subject_code">MA102
+                    <div class="subject_code"><a class="first_class_link class_link" href="/ma102">MA102</a>
                             <button onclick="showLoginPrompt('loginForm1','abc1')"><img id="abc1" style="height: 32px; width: 32px;" src="icons/pencil.svg" alt="down_arrow" title="Edit Attendance"></button> &nbsp;
                             <form action="/tdownloadattendance_ma102" method="POST"><button class="attendance_button" ><img style="height: 32px; width: 32px;" src="icons/downarrow.png" title="Download Attendance"></button></form> &nbsp;
                             <form action="/take_attendance_ma102" method="POST"><button class="attendance_button" type="submit"><img src="icons/attendance-statistics-1-32.png" title="Take Attendance"></button></form>
@@ -58,12 +74,11 @@
                     <div class="subject_detail">Linear Algebra</div>
 
                 </div>
-            </a>
         </div>
         <div class="second_class class" style="display: <%= cs102%>" >
-            <a class="second_class_link class_link" href="#">
+            
                 <div class="second_card-body">
-                    <div class="subject_code">CS102
+                    <div class="subject_code"><a class="second_class_link class_link" href="/cs102">CS102</a>
                         <button onclick="showLoginPrompt('loginForm2','abc2')"><img id="abc2" style="height: 32px; width: 32px;" src="icons/pencil.svg" alt="down_arrow" title="Edit Attendance"></button> &nbsp;
                         <form action="/tdownloadattendance_cs102" method="POST"><button class="attendance_button"><img style="height: 32px; width: 32px;"  title="Download Attendance" src="icons/downarrow.png"></button></form> &nbsp;
                         <form action="/take_attendance_cs102" method="POST"><button class="attendance_button" type="submit"><img src="icons/attendance-statistics-1-32.png" title="Take Attendance"></button></form>
@@ -86,12 +101,12 @@
                 <div class="subject_detail">Software tools</div>
 
 
-            </a>
+            
         </div>
         <div class="third_class class" style="display: <%= ee101%>" >
-            <a class="third_class_link class_link" href="#">
+            
                 <div class="third_card-body">
-                    <div class="subject_code">EE101
+                    <div class="subject_code"><a class="third_class_link class_link" href="/ee101">EE101</a>
                         <button onclick="showLoginPrompt('loginForm3','abc3')"><img id="abc3" style="height: 32px; width: 32px;" src="icons/pencil.svg" alt="down_arrow" title="Edit Attendance"></button> &nbsp;
                         <form action="/downloadattendance_ee101" method="POST"><button class="attendance_button" ><img style="height: 32px; width: 32px;"  title="Download Attendance" src="icons/downarrow.png"></button></form> &nbsp;
                         <form action="/take_attendance_ee101" method="POST"><button class="attendance_button" type="submit"><img src="icons/attendance-statistics-1-32.png" title="Take Attendance"></button></form>
@@ -117,9 +132,9 @@
         </div>
 
         <div class="fourth_class class" style="display: <%= no101%>">
-            <a class="fourth_class_link class_link" href="#">
+            
                 <div class="fourth_card-body">
-                    <div class="subject_code">NO101
+                    <div class="subject_code"><a class="fourth_class_link class_link" href="no101">NO101</a>
                         <button onclick="showLoginPrompt('loginForm4','abc4')"><img id="abc4" style="height: 32px; width: 32px;" src="icons/pencil.svg" alt="down_arrow" title="Edit Attendance"></button> &nbsp;
                         <form action="/downloadattendance_no101" method="POST"><button class="attendance_button" ><img style="height: 32px; width: 32px;"  title="Download Attendance" src="icons/downarrow.png"></button></form> &nbsp;
                         <form action="/take_attendance_no101" method="POST"><button class="attendance_button" type="submit"><img src="icons/attendance-statistics-1-32.png" title="Take Attendance"></button></form>
@@ -146,5 +161,5 @@
     </div>
 <script src="home_teacher.js"></script>
 </body>
-
+<script src="home_teacher.js"></script>
 </html>

@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>post</title>
+        <link rel="stylesheet" type="text/css" href="post.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    </head>
+    <body>
+        <div class="topBar">
+            <div class="leftTopbar">
+                <a href="/" class="text-dark home_link">School System</a>
+            </div>
+            <div class="rightTopbar">
+                <button class="TopDropbtn"><i class="text-dark profile bi-person-circle"></i></button>
+                <div class="Topdropdown-content">
+                    <a href="/profile" class="dark">View my Details</a>
+                    <form action="/logout?_method=DELETE" method="POST" class="text-dark">
+                        <button type="submit" class="dark">Log Out</button>
+                      </form>
+                </div>
+            </div>
+        </div>
+    <!---------------------------------------------------------------------------------------------------------------->
+    <div id="side_bar"  class="sidebar" onmouseover="Sidebar()" onmouseout="Sidebar()">
+        <div class="side_bar_menu" style="display: <%= ma102%>"><a href="/ma102" class="side_bar_link"><div class="side_bar_menu_text"><img style="height: 50px; width: 50px; border-radius: 100px;" src="icons/s1.png"><span  id="icon-text" class="icon-text">MA102</span></a><br></div></div>
+        <div class="side_bar_menu" style="display: <%= cs102%>"><a href="/cs102" class="side_bar_link"><div class="side_bar_menu_text"><img style="height: 50px; width: 50px; border-radius: 100px;" src="icons/s2.png"><span  id="icon-text1" class="icon-text">CS102</span></a><br></div></div>
+        <div class="side_bar_menu" style="display: <%= ee101%>"><a href="/ee101" class="side_bar_link"><div class="side_bar_menu_text"><img style="height: 50px; width: 50px; border-radius: 100px;" src="icons/s3.png"><span  id="icon-text2" class="icon-text">EE101</span></a><br></div></div>
+        <div class="side_bar_menu" style="display: <%= no101%>"><a href="/no101" class="side_bar_link"><div class="side_bar_menu_text"><img style="height: 50px; width: 50px; border-radius: 100px;" src="icons/s4.png"><span  id="icon-text3" class="icon-text">NO101</span></a><br></div></div>
+    </div>
+    <!------------------------------------------------------------------------------------------------------------------>
+
+        <div class="main_body">
+            <div class="subject_name">
+                <%= subject%>
+            </div>
+            <div class="posts">
+                <%messages.forEach(post=>{%>
+                <div class="post">
+                    <div class="sender_detail">
+                        <%=post.sender%> <br><%=post.time%>
+                    </div>
+                    <div class="message">
+                        <%=post.message%>    
+                    </div>
+                </div>
+                <%})%>
+            </div>
+        </div>
+    <script src="home_page.js"></script>
+    </body>
+</html>

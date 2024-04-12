@@ -1,7 +1,6 @@
 body{
     background-image: url(bg_pic.avif);
-    background-size: cover;
-    background-attachment: fixed;
+    background-size: cover;  
     color: white;
 }
 .topBar{
@@ -51,8 +50,9 @@ body{
 
 }
 .Topdropdown-content > a:hover, .Topdropdown-content>form>button:hover{
-  background-color: #8789df;
+  background-color: #4245e1;
   border-radius: 12%;
+  font-weight: 600;
 }
 .Topdropdown-content a, .Topdropdown-content>form>button {
   display: block;
@@ -71,7 +71,7 @@ body{
 }
 .home_link{
   text-decoration: none;
-  color: #859119;
+  color: #ffffff;
   text-shadow: 1.5px 1.5px 1.5px rgb(155, 13, 232);
 }
 .TopDropbtn{
@@ -79,6 +79,12 @@ body{
   border: none;
   font-size: 40px;
   color: #5153d2;
+}
+.dark{
+  width: 100%;
+  background-color: #8789df;
+  border: none;
+  font-size: 20px;
 }
 .sidebar a:hover {
   color: #6b81a2;
@@ -122,6 +128,7 @@ body{
 }
 .icon-text:hover{
   color: whitesmoke;
+  font-weight: 600;
 }
 .classes{
   margin-top: 50px;
@@ -137,7 +144,10 @@ body{
   margin: 15px;
   border: #000000 solid;
   border-radius: 15px;
-  background-color: #5153d2;
+  background-color: #797acb;
+  animation-name: opac;
+  animation-duration: 1.5s;
+  padding: 15px;
 }
 
 .class_link{

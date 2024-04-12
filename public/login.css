@@ -1,6 +1,6 @@
 body{
     background-image: url(background.svg);
-    background-size: cover;
+    background-size:cover;
 }
 .qwe{
     display: flex;
