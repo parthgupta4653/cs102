@@ -87,7 +87,7 @@ app.get("/", checkAuthenticated,(req, res)=>{
 })
 
 app.get("/profile", checkAuthenticated, (req,res)=>{
-  res.render("profile", {name: req.user.name, id:req.user.id, email:req.user.email, branch: req.user.branch, batch: req.user.batch})
+  res.render("profile_teacher", {name: req.user.name, id:req.user.id, email:req.user.email, branch: req.user.branch, batch: req.user.batch})
 })
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------------*/

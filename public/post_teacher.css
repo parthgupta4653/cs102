@@ -21,6 +21,7 @@
   }
   
   body{
+    background-image: url(bg_pic.avif);
     background-size: cover;
     color: black;
   }
@@ -37,7 +38,7 @@
   .Topdropdown-content {
     display: none;
     position: absolute;
-    background-color: #42608b;
+    background-color:#8789df;
     border-radius: 12%;
     top: 50px;
     width: 140px;
@@ -52,7 +53,7 @@
     text-decoration: none;
   }
   .Topdropdown-content > a:hover, .Topdropdown-content>form>button:hover{
-    background-color: #6bc6dd;
+    background-color:#4245e1;
     border-radius: 12%;
   }
   .Topdropdown-content a, .Topdropdown-content>form>button{
@@ -79,12 +80,12 @@
     border-radius: 90%;
     border: none;
     font-size: 40px;
-    color: #74C0FC;
+    color: #5153d2;
   }
 
   .dark{
     width: 100%;
-    background-color: #42608b;
+    background-color: #8789df;
     border: none;
     font-size: 20px;
     font-weight: 800;
@@ -100,7 +101,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color:#151f34;
+    background-color:#5153d2;
     overflow-x: hidden;
     white-space: nowrap;
     animation-name: slide_right;
@@ -129,7 +130,7 @@
     text-decoration: none;
     display: none;
     padding: 10px;
-    color: #a4a7b2;
+    color: #000000;
   }
   .icon-text:hover{
     color: whitesmoke;
@@ -142,11 +143,6 @@
     position: relative;
     height: 96.5%;
     margin-right: -7px;
-  }
-  body{
-    background:url(backgroundimage.avif);
-    background-size: cover;
-    
   }
 
 @keyframes slide_down {
@@ -163,7 +159,7 @@
     font-weight: 600;
     width: 450px;
     margin-left: 35%;
-    background-color: #6bb4eb;
+    background-color: #9b9cd8;
     animation: slide_down .75s ease-in-out;
     border-radius: 10px;
   }
@@ -202,7 +198,7 @@
     margin: 30px 40px;
     border: #000000 solid;
     animation: slide_up 1s 1 ease-in-out;
-    background-color: #6bb4eb;
+    background-color: #797acb;
     border-radius: 20px;
   }
   .sender_detail{
