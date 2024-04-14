@@ -23,10 +23,39 @@
 
         </div>
         <div id="details" class="box">
-            <pre>NAME      :<span id="name"><%= name%></span></pre>
-            <pre>EMAIL     :<span id="email"><%= email%></span></pre>
-            <pre>DEPARTMENT:<span id="department"><%= branch%></span></pre>
-            <br>
+            <table class="table_style">
+                <tr>
+                    <td>
+                        NAME:
+                    </td>
+                    <td>
+                        <span id="name">
+                            <%= name%>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        EMAIL:
+                    </td>
+                    <td>
+                        <span id="email">
+                            <%= email%>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        DEPARTMENT:
+                    </td>
+                    <td>
+                        <span id="departrment">
+                            <%= branch%>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+            <br><br><br>
             <div id="btn">
                 <a href="/" class="btn1">VIEW MY COURSES</a>
             </div>

@@ -19,11 +19,6 @@
   color: black;
 }
 
-body{
-  background:url(backgroundimage.avif);
-  background-size: cover;
-  color: black;
-}
 .rightTopbar {
   position: relative;
   display: flex;
@@ -99,7 +94,7 @@ body{
   position: fixed;
   top: 0;
   left: 0;
-  background-color:#3d79bd;
+  background-color:#1d40cc;
   overflow-x: hidden;
   white-space: nowrap;
   animation-name: slide_right;
@@ -127,7 +122,7 @@ body{
   text-decoration: none;
   display: none;
   padding: 10px;
-  color: #a4a7b2;
+  color: #000000;
 }
 .icon-text:hover{
   color: rgb(255, 251, 251);
@@ -135,6 +130,10 @@ body{
 }
 
 /*------------------------------------------------------------------------------------------------------------*/
+body{
+  background:url(1.jpg);
+  background-size: cover;
+}
 .classes{
   margin-top: 50px;
   margin-left: 70px;

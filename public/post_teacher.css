@@ -167,10 +167,10 @@
   .send{
     position: fixed;
     bottom: 0px;
-    width: 96.9%;
+    width: 94%;
     border: #000000 solid;
     display: flex;
-    margin-left: -10px;
+    margin-left: -14px;
   }
 
   .send_text{

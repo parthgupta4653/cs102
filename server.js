@@ -14,7 +14,7 @@ let attendanceCode = {"ma102":0,'cs102':0, 'ee101':0, 'no101':0}
 var attendanceArray = {"ma102":[],'cs102':[], 'ee101':[], 'no101':[]};
 var time = 15000
 
-const db = mysql.createConnection({host:"127.0.0.1", user:"root", password:"", database:"cs102" })
+const db = mysql.createConnection({host:"127.0.0.1", user:"root", password:"root", database:"cs102" })
 db.connect((error) =>{
     if (error){throw error}
 })
@@ -129,6 +129,7 @@ app.get("/cs102", checkAuthenticated, (req,res)=>{
 app.get("/ee101", checkAuthenticated, (req,res)=>{
   let all_subjects_val = get_subjects(req)
   db.query("select * from posts where subject='EE101'", function(err,results){
+    if(err){throw err}
     results =  Object.values(JSON.parse(JSON.stringify(results)))
     //console.log(results)
     if(req.user.type === "student"){
