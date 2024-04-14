@@ -20,10 +20,6 @@
     color: black;
   }
   
-  body{
-    background-size: cover;
-    color: black;
-  }
   .rightTopbar {
     position: relative;
     display: flex;
@@ -100,7 +96,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color:#151f34;
+    background-color:#1d40cc;
     overflow-x: hidden;
     white-space: nowrap;
     animation-name: slide_right;
@@ -129,7 +125,7 @@
     text-decoration: none;
     display: none;
     padding: 10px;
-    color: #a4a7b2;
+    color: #000000;
   }
   .icon-text:hover{
     color: whitesmoke;
@@ -144,9 +140,9 @@
     margin-right: -7px;
   }
   body{
-    background:url(backgroundimage.avif);
+    background:url(1.jpg);
     background-size: cover;
-    
+    color: #000000;
   }
 
 @keyframes slide_down {
@@ -162,7 +158,7 @@
     font-size: 40px;
     font-weight: 600;
     width: 450px;
-    margin-left: 35%;
+    margin-left: 23%;
     background-color: #6bb4eb;
     animation: slide_down .75s ease-in-out;
     border-radius: 10px;
