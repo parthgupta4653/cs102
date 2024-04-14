@@ -54,17 +54,17 @@
                 <div class="first_card-body">
                     <div class="subject_code"><a class="first_class_link class_link" href="/ma102">MA102</a>
                             <button onclick="showLoginPrompt('loginForm1','abc1')"><img id="abc1" style="height: 32px; width: 32px;" src="icons/pencil.svg" alt="down_arrow" title="Edit Attendance"></button> &nbsp;
-                            <form action="/tdownloadattendance_ma102" method="POST"><button class="attendance_button" ><img style="height: 32px; width: 32px;" src="icons/downarrow.png" title="Download Attendance"></button></form> &nbsp;
-                            <form action="/take_attendance_ma102" method="POST"><button class="attendance_button" type="submit"><img src="icons/attendance-statistics-1-32.png" title="Take Attendance"></button></form>
+                            <form action="/downloadattendance" method="POST"><button class="attendance_button" formaction="/downloadattendance?button=MA102"><img style="height: 32px; width: 32px;" src="icons/downarrow.png" title="Download Attendance"></button></form> &nbsp;
+                            <form action="/take_attendance" method="POST"><button class="attendance_button" type="submit" formaction="/take_attendance?button=MA102"><img src="icons/attendance-statistics-1-32.png" title="Take Attendance"></button></form>
                             <div class="submit_form" id="loginForm1" style="display: none;">
-                                <form action="/edit_attendance_ma102" method="POST">
+                                <form action="/edit_attendance" method="POST">
                                     <div class="pw"><label for="id"><br>ID:</label></div>
                                     <div class="pw_input"><input type="text" id="id" name="id"></div>
                                     <div class="pw"><label for="date"><br>Date:</label></div>
                                     <div class="pw_input"><input type="date" id="date" name="date"></div>
                                     <div class="pw"><label for="status"><br>Status:</label></div>
                                     <div class="pw_input"><input type="status" id="status" name="status"></div>
-                                    <button class="submit_button" type="submit">Submit</button>
+                                    <button class="submit_button" type="submit" formaction="/edit_attendance?button=MA102">Submit</button>
                                 </form>
                             </div>
                             <% if(codes.ma102!==0){ %>
@@ -80,17 +80,17 @@
                 <div class="second_card-body">
                     <div class="subject_code"><a class="second_class_link class_link" href="/cs102">CS102</a>
                         <button onclick="showLoginPrompt('loginForm2','abc2')"><img id="abc2" style="height: 32px; width: 32px;" src="icons/pencil.svg" alt="down_arrow" title="Edit Attendance"></button> &nbsp;
-                        <form action="/tdownloadattendance_cs102" method="POST"><button class="attendance_button"><img style="height: 32px; width: 32px;"  title="Download Attendance" src="icons/downarrow.png"></button></form> &nbsp;
-                        <form action="/take_attendance_cs102" method="POST"><button class="attendance_button" type="submit"><img src="icons/attendance-statistics-1-32.png" title="Take Attendance"></button></form>
+                        <form action="/downloadattendance" method="POST"><button class="attendance_button" formaction="/downloadattendance?button=CS102"><img style="height: 32px; width: 32px;"  title="Download Attendance" src="icons/downarrow.png"></button></form> &nbsp;
+                        <form action="/take_attendance" method="POST"><button class="attendance_button" type="submit" formaction="/take_attendance?button=CS102"><img src="icons/attendance-statistics-1-32.png" title="Take Attendance"></button></form>
                             <div class="submit_form" id="loginForm2" style="display: none;">
-                                <form action="/edit_attendance_cs102" method="POST">
+                                <form action="/edit_attendance" method="POST">
                                     <div class="pw"><label for="id"><br>ID:</label></div>
                                     <div class="pw_input"><input type="text" id="id" name="id"></div>
                                     <div class="pw"><label for="date"><br>Date:</label></div>
                                     <div class="pw_input"><input type="date" id="date" name="date"></div>
                                     <div class="pw"><label for="status"><br>Status:</label></div>
                                     <div class="pw_input"><input type="status" id="status" name="status"></div>
-                                    <button class="submit_button" type="submit">Submit</button>
+                                    <button class="submit_button" type="submit" formaction="/edit_attendance?button=CS102">Submit</button>
                                 </form>
                             </div>
                             <% if(codes.cs102!==0){ %>
@@ -108,18 +108,18 @@
                 <div class="third_card-body">
                     <div class="subject_code"><a class="third_class_link class_link" href="/ee101">EE101</a>
                         <button onclick="showLoginPrompt('loginForm3','abc3')"><img id="abc3" style="height: 32px; width: 32px;" src="icons/pencil.svg" alt="down_arrow" title="Edit Attendance"></button> &nbsp;
-                        <form action="/downloadattendance_ee101" method="POST"><button class="attendance_button" ><img style="height: 32px; width: 32px;"  title="Download Attendance" src="icons/downarrow.png"></button></form> &nbsp;
-                        <form action="/take_attendance_ee101" method="POST"><button class="attendance_button" type="submit"><img src="icons/attendance-statistics-1-32.png" title="Take Attendance"></button></form>
+                        <form action="/downloadattendance" method="POST"><button class="attendance_button" formaction="/downloadattendance?button=EE101"><img style="height: 32px; width: 32px;"  title="Download Attendance" src="icons/downarrow.png"></button></form> &nbsp;
+                        <form action="/take_attendance" method="POST"><button class="attendance_button" type="submit" formaction="/take_attendance?button=EE101"><img src="icons/attendance-statistics-1-32.png" title="Take Attendance"></button></form>
                         
                             <div class="submit_form" id="loginForm3" style="display: none;">
-                                <form action="/edit_attendance_ee101" method="POST">
+                                <form action="/edit_attendance" method="POST">
                                     <div class="pw"><label for="id"><br>ID:</label></div>
                                     <div class="pw_input"><input type="text" id="id" name="id"></div>
                                     <div class="pw"><label for="date"><br>Date:</label></div>
                                     <div class="pw_input"><input type="date" id="date" name="date"></div>
                                     <div class="pw"><label for="status"><br>Status:</label></div>
                                     <div class="pw_input"><input type="status" id="status" name="status"></div>
-                                    <button class="submit_button" type="submit">Submit</button>
+                                    <button class="submit_button" type="submit" formaction="/edit_attendance?button=EE101">Submit</button>
                                 </form>
                             </div>
                             <% if(codes.ee101!==0){ %>
@@ -136,18 +136,18 @@
                 <div class="fourth_card-body">
                     <div class="subject_code"><a class="fourth_class_link class_link" href="no101">NO101</a>
                         <button onclick="showLoginPrompt('loginForm4','abc4')"><img id="abc4" style="height: 32px; width: 32px;" src="icons/pencil.svg" alt="down_arrow" title="Edit Attendance"></button> &nbsp;
-                        <form action="/downloadattendance_no101" method="POST"><button class="attendance_button" ><img style="height: 32px; width: 32px;"  title="Download Attendance" src="icons/downarrow.png"></button></form> &nbsp;
-                        <form action="/take_attendance_no101" method="POST"><button class="attendance_button" type="submit"><img src="icons/attendance-statistics-1-32.png" title="Take Attendance"></button></form>
+                        <form action="/downloadattendance" method="POST"><button class="attendance_button" formaction="/downloadattendance?button=NO102"><img style="height: 32px; width: 32px;"  title="Download Attendance" src="icons/downarrow.png"></button></form> &nbsp;
+                        <form action="/take_attendance" method="POST"><button class="attendance_button" type="submit" formaction="/take_attendance?button=NO101"><img src="icons/attendance-statistics-1-32.png" title="Take Attendance"></button></form>
                         
                             <div class="submit_form" id="loginForm4" style="display: none;">
-                                <form action="/edit_attendance_no101" method="POST">
+                                <form action="/edit_attendance" method="POST">
                                     <div class="pw"><label for="id"><br>ID:</label></div>
                                     <div class="pw_input"><input type="text" id="id" name="id"></div>
                                     <div class="pw"><label for="date"><br>Date:</label></div>
                                     <div class="pw_input"><input type="date" id="date" name="date"></div>
                                     <div class="pw"><label for="status"><br>Status:</label></div>
                                     <div class="pw_input"><input type="status" id="status" name="status"></div>
-                                    <button class="submit_button" type="submit">Submit</button>
+                                    <button class="submit_button" type="submit" formaction="/edit_attendance?button=NO101">Submit</button>
                                 </form>
                             </div>
                             <% if(codes.no101!==0){ %>
@@ -161,5 +161,4 @@
     </div>
 <script src="home_teacher.js"></script>
 </body>
-<script src="home_teacher.js"></script>
 </html>

@@ -47,10 +47,10 @@
             <%})%>
         </div>
 
-            <form action="<%= "/post_"+subCode%>" method="POST">
+            <form action="/send" method="POST">
                 <div class="send">
                     <input name="message" type="text" id="message"class="send_text" placeholder="What's on your mind?..."> 
-                    <button class="send_button" type="submit"><i class="fa-solid fa-arrow-right fa-4x"></i></button>
+                    <button class="send_button" type="submit" formaction="<%= "/send?button="+ subCode%>"><i class="fa-solid fa-arrow-right fa-4x"></i></button>
                 </div>
             </form>
 
