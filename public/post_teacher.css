@@ -153,12 +153,12 @@
   .subject_name{
     border: #000000 solid;
     text-align: center;
+    margin: 0 auto;
     margin-top: 50px;
     font-family:'Courier New', Courier, monospace;
     font-size: 40px;
     font-weight: 600;
     width: 450px;
-    margin-left: 35%;
     background-color: #9b9cd8;
     animation: slide_down .75s ease-in-out;
     border-radius: 10px;
