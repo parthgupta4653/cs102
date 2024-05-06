@@ -13,10 +13,10 @@ const bcrypt = require("bcrypt")
 const all_subjects_val = {"MA102":"none", "CS102":"none", "NO101":"none", "EE101":"none"} // This dictionary decides whether the subject will be visible to the user or not
 var attendanceCode = {"ma102":0,'cs102':0, 'ee101':0, 'no101':0} // This dictionary contains the access code for the attendance of each subject
 var attendanceArray = {"ma102":[],'cs102':[], 'ee101':[], 'no101':[]}; //Stores the list of students who marked present for each subject
-var time = 15000 //Set the time for which the student can enter their attendance (in milliseconds)
+var time = 180000 //Set the time for which the student can enter their attendance (in milliseconds)
 
 //Connects to the local mysql database
-const db = mysql.createConnection({host:"127.0.0.1", user:"root", password:"", database:"cs102" })
+const db = mysql.createConnection({host:"sql6.freemysqlhosting.net", user:"sql6704343", password:"XvRrCeHIBT", database:"sql6704343" })
 db.connect((error) =>{
     if (error){throw error} //If not able to connect throw an error
 })
