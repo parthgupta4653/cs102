@@ -26,7 +26,7 @@ function showLoginPrompt(xyz,abc) {
     let x=document.getElementById(abc).alt;
     
     if(x=="Mark_Attendance"){
-        document.getElementById(abc).src="icons/close.png";
+        document.getElementById(abc).src="public/icons/close.png";
         var loginForm = document.getElementById(xyz);
         loginForm.style.display = "block";
 
@@ -34,7 +34,7 @@ function showLoginPrompt(xyz,abc) {
     }
 
     else{
-        document.getElementById(abc).src="icons/attendance-statistics-1-32.png";
+        document.getElementById(abc).src="public/icons/attendance-statistics-1-32.png";
         var loginForm = document.getElementById(xyz);
         loginForm.style.display = "none";
 
