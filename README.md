@@ -9,7 +9,9 @@
 - download nodejs
 - in cmd on folder path type "npm init -y", then type "npm i bcrypt ejs express express-flash express-session method-override mysql passport passport-local nodemon xlsx" to install all dependencies
 - To run server type npm run start
-- password for both accounts is "123"
+- password for all accounts is "123"
+
+teacher email: teacher1@mail.com
   
 - db name "cs102"
 - table name "user"
