@@ -26,7 +26,7 @@ function showLoginPrompt(xyz,abc) {
     let x=document.getElementById(abc).alt;
     
     if(x=="down_arrow"){
-        document.getElementById(abc).src="icons/close.png";
+        document.getElementById(abc).src="public/icons/close.png";
         var loginForm = document.getElementById(xyz);
         loginForm.style.display = "block";
 
@@ -34,7 +34,7 @@ function showLoginPrompt(xyz,abc) {
     }
 
     else{
-        document.getElementById(abc).src="icons/pencil.svg";
+        document.getElementById(abc).src="public/icons/pencil.svg";
         var loginForm = document.getElementById(xyz);
         loginForm.style.display = "none";
 
