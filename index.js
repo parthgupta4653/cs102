@@ -67,7 +67,7 @@ app.use(methodOverride('_method'))
 
 app.set("views", __dirname + "/views");
 app.set('view engine', 'ejs') //Set the view engine to ejs type files present in the views folder
-app.use(express.static("public"))// Sets path of the helper css and front-end js files to the public folder
+app.use(express.static( __dirname + "public"))// Sets path of the helper css and front-end js files to the public folder
 app.use(express.urlencoded({extended:false}))
 app.use(express.json()) //Allows to use Json
 
